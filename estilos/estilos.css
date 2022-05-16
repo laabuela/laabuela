@@ -7,27 +7,23 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background: crimson;
+    background: #ECECEC;
     font-family: sans-serif;
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 }
 
 input {
     display: none;
 }
 
-label {
-    cursor: pointer;
-}
-
 header {
         width: 100%;
         height: 50px;
-        background: black;
+        background: crimson;
         color: white;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -37,15 +33,27 @@ header a {
 }
 
 header h1 {
-        font-size: 5vh;
-    }
+    margin-left: 15px;
+}
+
+.labelmenu {
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
 
 ul {
     position: absolute;
-    width: 100%;
-    height: auto;
+    min-height: 200px;
     background: black;
-    left: 0;
+    min-width: 100px;
+    right: 0;
     top: 50px;
     display: flex;
     flex-flow: column;
@@ -70,11 +78,32 @@ ul li a {
     display: flex;
 }
 
+#inputmenu:checked ~ .labelmenu .fa-x {
+    display: block;
+}
+
+#inputmenu:checked ~ .labelmenu .fa-bars {
+    display: none;
+}
+
+.labelmenu .fa-x {
+    display: none;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
 article {
-    width: 280px;
-    margin: 100px auto;
-    text-align: center;
+    height: auto;
+    width: auto;
     padding: 15px;
+    text-align: center;
     box-shadow: 1px 1px 10px black;
 }
 
@@ -112,7 +141,7 @@ article {
 .titulo-categoria {
     width: 100%;
     height: 100px;
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,10 +162,10 @@ article {
     width: 250px;
     height: 300px;
     margin: 15px;
+    border: 1px solid grey
 }
 
 .img-producto {
-    border-bottom: 1px solid;
     height: 80%;
     width: 100%;
 }
@@ -160,7 +189,7 @@ article {
 footer {
     width: 100%;
     height: 100px;
-    background: black;
+    background: crimson;
     position: absolute;
     bottom: 0;
     display: flex;
@@ -174,4 +203,7 @@ footer a {
 }
 
 @media (max-width: 900px) {
+    ul {
+        width: 100%;
+    }
 }
